@@ -1,0 +1,94 @@
+@import './variables.scss';
+
+.header{
+    padding-top: 30px;
+    height: 100vh;
+
+
+    .girl-and-space-img{
+        position: absolute;
+        top:0;
+        right:0;
+        z-index: -1;
+        width:50vw;
+        height: auto;
+
+        svg{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .nav{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        .nav-left{
+            display: flex;
+            align-items: flex-end;
+            .logo{
+                margin-right: 5px;
+                .main-accent-color-element{
+                    fill:$main-accent-color;
+                }
+                .main-color-element{
+                    fill:$main-color;
+                }
+            }
+    
+            .brand{
+    
+                font-family: $additional-font-family;
+                font-size: 34.125px;
+                .first-part{
+                    font-weight: 500;
+                    color: $main-font-color;
+                }
+                .second-part{
+                    font-weight: 400;
+                    color:$main-accent-color
+                }
+            }
+        }
+
+        .nav-right{
+            .login-btn{
+                button{
+
+                    padding: 10px 60px;
+                    background-color: $background-color;
+
+                    color: $main-font-color;
+                    font-family: $additional-font-family;
+                    border-radius: $btn-border-radius;
+                    border: 1px solid $main-font-color;
+                }
+            }
+        }
+    }
+
+    .header-content{
+        width: 35%;
+        padding-top: 28vh;
+        label{
+            font:$label-font;
+            color: $no-accent-font-color;
+            text-transform: uppercase;
+        }
+        h1{
+            font: $h1-font;
+            margin-bottom: 40px;
+        }
+        p{
+            font:$p2-font;
+            color: $additional-font-color;
+            margin-bottom: 60px;
+        }
+        .btn-and-counter{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+}

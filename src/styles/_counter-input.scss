@@ -1,0 +1,12 @@
+@import './variables';
+
+
+.counter-input{
+    width: 70px;
+    height: 60px;
+    border-radius: $btn-border-radius;
+    text-align: center;
+    font:$counter-font;
+    color: $main-accent-color;
+    box-shadow: 0px 5px 30px $main-accent-shadow;
+}
