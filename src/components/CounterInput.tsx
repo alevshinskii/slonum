@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import '../styles/_counter-input.scss';
 
 interface CounterInputProps{
     value:string;

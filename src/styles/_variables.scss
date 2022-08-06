@@ -1,8 +1,14 @@
+$bg-color: white;
+
+$shadow-opacity: 20%;
+$underline-opacity: 70%;
+
 $main-color: #14a76c;
-$main-color-shadow: #14a76c3f;
+$main-color-shadow: mix($main-color, $bg-color, $shadow-opacity);
 
 $main-accent-color: #ff652f;
-$main-accent-shadow: #ff662f3a;
+$main-accent-shadow: mix($main-accent-color, $bg-color, $shadow-opacity);
+$main-accent-light: mix($main-accent-color, $bg-color, $underline-opacity);
 
 $main-gradient: linear-gradient(326.12deg, #5d77ff 17.95%, #6539c1 89.78%);
 
@@ -13,8 +19,6 @@ $extra-font-color: #ffffff;
 
 $main-font-family: "Nunito", sans-serif;
 $additional-font-family: "Rubik", sans-serif;
-
-$background-color: white;
 
 $btn-border-radius: 15px;
 

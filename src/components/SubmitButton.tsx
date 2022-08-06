@@ -1,6 +1,3 @@
-import React from 'react';
-import "../styles/_submit-btn.scss";
-
 type SubmitButtonProps = {
     type: string,
     children: JSX.Element,

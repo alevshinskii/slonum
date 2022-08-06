@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import CounterInput from './CounterInput';
-import '../styles/_counter.scss';
 
 function Counter() {
 
     const dotsSvg=require('../img/dots.svg').default;
 
 
-    const [hours,setHours]=useState('01');
-    const [minutes,setMinutes]=useState('09');
-    const [seconds,setSeconds]=useState('43');
+    const [hours]=useState('01');
+    const [minutes]=useState('09');
+    const [seconds]=useState('43');
 
     return(
         <div className="counter">

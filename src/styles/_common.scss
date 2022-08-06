@@ -1,0 +1,60 @@
+@import "./variables";
+
+button {
+    border-radius: $btn-border-radius;
+}
+
+h1 {
+    font: $h1-font;
+}
+
+h2 {
+    font: $h2-font;
+}
+
+.container {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+.color-main {
+    color: $main-color;
+}
+
+.color-main-accent {
+    color: $main-accent-color;
+}
+
+.color-main-accent-light {
+    color: $main-accent-light;
+}
+
+
+.text-underlined {
+    display:inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.main-accent-color-element {
+    fill: $main-accent-color;
+}
+.main-color-element {
+    fill: $main-color;
+}
+.main-accent-underline-element {
+    fill: $main-accent-light;
+}
+
+.link{
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px ;
+    text-underline-offset: 3px;
+    display: inline;
+}

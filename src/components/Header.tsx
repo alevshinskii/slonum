@@ -1,7 +1,6 @@
 import Logo from "./Logo";
 import LogInButton from "./LogInButton";
 import HeaderBackgroundImage from "./HeaderBackgroundImage";
-import "../styles/_header.scss";
 import SubmitButton from "./SubmitButton";
 import Counter from "./Counter";
 

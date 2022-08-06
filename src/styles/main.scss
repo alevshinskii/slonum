@@ -1,18 +1,13 @@
-@import "./reset.scss";
-@import "./fonts.scss";
-@import "./variables.scss";
+@import "./reset";
+@import "./variables";
+@import "./fonts";
+@import "./common";
+@import "./app";
+@import "./header";
+@import "./counter";
+@import "./counter-input";
+@import "./about";
+@import "./submit-btn";
+@import "./goals";
+@import "./card";
 
-
-.container{
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 80%;
-}
-
-.fw-bold{
-    font-weight: bold;
-}
-
-.color-main{
-    color:$main-color;
-}
