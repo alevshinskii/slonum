@@ -1,3 +1,4 @@
+import Card from "./Card";
 import UnderlinedText from "./UnderlinedText";
 
 function Goals() {
@@ -9,40 +10,68 @@ function Goals() {
                 </h2>
             </div>
             <div className="goals-content container">
-                <div className="card">
-                    <img src={require("../img/star.svg").default} alt="" />
-                    Шанс занять 1 место — в вашем городе и по всей России
-                </div>
-                <div className="card">
-                    <img src={require("../img/winne.svg").default} alt="" />
-                    Развитие самостоятельности + свободное время для родителей
-                    ;)
-                </div>
-                <div className="card">
-                    <img
-                        src={require("../img/certification.svg").default}
-                        alt=""
-                    />
-                    Персональный диплом в разных номинациях каждому участнику
-                </div>
-                <div className="card">
-                    <img src={require("../img/gift.svg").default} alt="" />
-                    Призы и скидки для подписчиков и авторизованных
-                    пользователей
-                </div>
-                <div className="card">
-                    <img src={require("../img/email.svg").default} alt="" />
-                    Бесплатный диплом на email — через 1 день после конкурса
-                </div>
-                <div className="card">
-                    <img src={require("../img/vk.svg").default} alt="" />
+                <Card>
                     <div>
-                        Публикация работ победителей во ВКонтакте.{" "}
-                        <a href="/#" className="color-main-accent-light link">
-                            Подписывайтесь!
-                        </a>
+                        <img src={require("../img/star.svg").default} alt="" />
+                        <div>
+                            Шанс занять 1 место — в вашем городе и по всей
+                            России
+                        </div>
                     </div>
-                </div>
+                </Card>
+                <Card>
+                    <div>
+                        <img src={require("../img/winne.svg").default} alt="" />
+                        <div>
+                            Развитие самостоятельности + свободное время для
+                            родителей ;)
+                        </div>
+                    </div>
+                </Card>
+                <Card>
+                    <div>
+                        <img
+                            src={require("../img/certification.svg").default}
+                            alt=""
+                        />
+                        <div>
+                            Персональный диплом в разных номинациях каждому
+                            участнику
+                        </div>
+                    </div>
+                </Card>
+                <Card>
+                    <div>
+                        <img src={require("../img/gift.svg").default} alt="" />
+                        <div>
+                            Призы и скидки для подписчиков и авторизованных
+                            пользователей
+                        </div>
+                    </div>
+                </Card>
+                <Card>
+                    <div>
+                        <img src={require("../img/email.svg").default} alt="" />
+                        <div>
+                            Бесплатный диплом на email — через 1 день после
+                            конкурса
+                        </div>
+                    </div>
+                </Card>
+                <Card>
+                    <div>
+                        <img src={require("../img/vk.svg").default} alt="" />
+                        <div>
+                            Публикация работ победителей во ВКонтакте.{" "}
+                            <a
+                                href="/#"
+                                className="color-main-accent-light link"
+                            >
+                                Подписывайтесь!
+                            </a>
+                        </div>
+                    </div>
+                </Card>
             </div>
         </div>
     );
