@@ -1,0 +1,28 @@
+.diplom {
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        .block-title {
+            text-align: start;
+            margin-bottom: 25px;
+        }
+
+        .block-text {
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .block-img {
+            width: 50%;
+        }
+
+        p {
+            font: $p2-font;
+            color: $additional-font-color;
+            margin-bottom: 20px;
+        }
+    }
+}
