@@ -1,0 +1,12 @@
+.round-btn{
+    width: 80px;
+    height: 80px;
+    background-color: $main-accent-color;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: $round-btn-font;
+    color: $extra-font-color;
+}

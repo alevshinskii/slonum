@@ -4,7 +4,7 @@ import UnderlinedText from "./UnderlinedText";
 function Goals() {
     return (
         <div className="goals">
-            <div className="goals-title">
+            <div className="block-title">
                 <h2>
                     Для чего <UnderlinedText>нужно</UnderlinedText> участвовать
                 </h2>
