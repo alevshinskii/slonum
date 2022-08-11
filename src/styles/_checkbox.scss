@@ -58,8 +58,10 @@
     .checkbox-label {
         > * {
             display: inline;
-            font: $label-font;
-            color: $no-accent-font-color;
         }
+    }
+    label {
+        font: $label-font;
+        color: $no-accent-font-color;
     }
 }

@@ -5,6 +5,7 @@ import Goals from "./components/Goals";
 import Header from "./components/Header";
 import Plan from "./components/Plan";
 import Registration from "./components/Registration";
+import Subscribe from "./components/Subscribe";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
             <Diplom />
             <Registration />
             <FAQ />
+            <Subscribe />
         </div>
     );
 }
