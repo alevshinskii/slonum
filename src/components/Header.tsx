@@ -3,6 +3,7 @@ import LogInButton from "./LogInButton";
 import HeaderBackgroundImage from "./HeaderBackgroundImage";
 import SubmitButton from "./SubmitButton";
 import Counter from "./Counter";
+import SubmitButtonType from "./SubmitButtonType";
 
 function Header() {
     return (
@@ -22,16 +23,13 @@ function Header() {
             </div>
             <div className="header-content container">
                 <label>От компании СлонУМ</label>
-                <h1>
-                    Всероссийский конкурс
-                    Детского рисунка
-                </h1>
+                <h1>Всероссийский конкурс Детского рисунка</h1>
                 <p>
                     Участвуйте в конкурсе и получайте призы в различных
                     номинациях детского рисунка для всех возрастов
                 </p>
                 <div className="btn-and-counter">
-                    <SubmitButton type={"main"}>
+                    <SubmitButton type={SubmitButtonType.primary}>
                         <div>Участвовать</div>
                     </SubmitButton>
                     <Counter />

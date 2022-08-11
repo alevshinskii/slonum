@@ -17,6 +17,12 @@
 
         .block-img {
             width: 50%;
+            display: flex;
+            justify-content: flex-end;
+            img {
+                width: 100%;
+                height: auto;
+            }
         }
 
         p {

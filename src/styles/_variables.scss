@@ -1,16 +1,21 @@
 $bg-color: white;
 
-$shadow-opacity: 20%;
+$shadow-opacity: 30%;
+$dark-opacity: 70%;
 $underline-opacity: 70%;
 
 $main-color: #14a76c;
 $main-color-shadow: mix($main-color, $bg-color, $shadow-opacity);
+$main-color-dark: mix($main-color, black, $dark-opacity);
 
 $main-accent-color: #ff652f;
 $main-accent-shadow: mix($main-accent-color, $bg-color, $shadow-opacity);
 $main-accent-light: mix($main-accent-color, $bg-color, $underline-opacity);
 
 $main-gradient: linear-gradient(326.12deg, #5d77ff 17.95%, #6539c1 89.78%);
+
+$secondary-color: #e02d05;
+$secondary-color-shadow: mix($secondary-color, $bg-color, $shadow-opacity);
 
 $main-font-color: #1f1d2a;
 $additional-font-color: #4f5569;
@@ -19,8 +24,6 @@ $extra-font-color: #ffffff;
 
 $main-font-family: "Nunito", sans-serif;
 $additional-font-family: "Rubik", sans-serif;
-
-$btn-border-radius: 15px;
 
 $h1-font: normal 700 55px $main-font-family;
 $h2-font: normal 700 32px $main-font-family;
@@ -33,3 +36,13 @@ $point-font: normal 400 20px $additional-font-family;
 $btn-font: normal 700 20px $additional-font-family;
 $counter-font: normal 700 32px $additional-font-family;
 $round-btn-font: normal 700 40px $additional-font-family;
+$text-input-font: normal 400 20px $additional-font-family;
+$price-font: normal 400 96px $additional-font-family;
+$price-secondary-font: normal 500 30px $additional-font-family;
+
+$btn-border-radius: 15px;
+
+$text-input-border-radius: 15px;
+$text-input-border: 1px solid $no-accent-font-color;
+
+$checkbox-border-radius: 30%;

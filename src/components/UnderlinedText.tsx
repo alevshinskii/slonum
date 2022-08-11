@@ -5,7 +5,7 @@ type UnderlinedTextProps = {
 function UnderlinedText({ children }: UnderlinedTextProps) {
     const line = (
         <svg
-            className="main-accent-underline-element"
+            className="fill-main-accent-underline"
             width="105"
             height="10"
             viewBox="0 0 105 10"
