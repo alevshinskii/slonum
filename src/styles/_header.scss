@@ -42,17 +42,6 @@
 
         .nav-right {
             z-index: 1;
-            .login-btn {
-                button {
-                    padding: 10px 60px;
-                    background-color: $bg-color;
-
-                    color: $main-font-color;
-                    font-family: $additional-font-family;
-                    border-radius: $btn-border-radius;
-                    border: 1px solid $main-font-color;
-                }
-            }
         }
     }
 

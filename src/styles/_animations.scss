@@ -1,0 +1,765 @@
+.animation-timer {
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: timer;
+}
+@keyframes timer {
+    from {
+        opacity: 0;
+    }
+
+    33% {
+        opacity: 100%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+.animation-space-load {
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-name: space-load;
+}
+@keyframes space-load {
+    from {
+        opacity: 0;
+    }
+    75% {
+        opacity: 100%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+.animation-btn-load {
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-name: btn-load;
+}
+@keyframes btn-load {
+    from {
+        background-color: $main-accent-color;
+        color: $extra-font-color;
+    }
+
+    to {
+        background-color: $bg-color;
+        color: $main-font-color;
+    }
+}
+
+// Слон
+
+// Эффект движения - Natural (плавное ускорение и такое же плавное затухание)
+
+// 1. Изначально повернут на  -11°, поворачивается и останавливается на значении 30° (т.е. +41° от изначальной точки) за период в 6с. А так же сдвигается на 10px направо
+// 2. Потом возвращается, всё тоже самое, только наоборот.
+
+.animation-elephant {
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-name: elephant;
+    animation-delay: 2s;
+
+    $deg: -11deg;
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    transform: rotate($deg);
+    transform-origin: center center;
+}
+@keyframes elephant {
+    from {
+        $deg: -11deg;
+        -webkit-transform: rotate($deg);
+        -moz-transform: rotate($deg);
+        -ms-transform: rotate($deg);
+        -o-transform: rotate($deg);
+        transform: rotate($deg);
+        transform-origin: center center;
+    }
+    50% {
+        $deg: 30deg;
+        $x: 10px;
+        $y: 0;
+        -webkit-transform: translate($x, $y) rotate($deg);
+        -moz-transform: translate($x, $y) rotate($deg);
+        -ms-transform: translate($x, $y) rotate($deg);
+        -o-transform: translate($x, $y) rotate($deg);
+        transform: translate($x, $y) rotate($deg);
+        transform-origin: center center;
+    }
+    to {
+        $deg: -11deg;
+        -webkit-transform: rotate($deg);
+        -moz-transform: rotate($deg);
+        -ms-transform: rotate($deg);
+        -o-transform: rotate($deg);
+        transform: rotate($deg);
+        transform-origin: center center;
+    }
+}
+
+// Лампочка
+
+// Эффект движения - Natural (плавное ускорение и такое же плавное затухание)
+
+// 1. Начальная позиция 15°. Проигрывается с момента 1.3с. после начала всей анимации. Происходит поворот в точку +40°. Заканчивается на 4.80 секунде.
+// 2. С 4.80с. до 8.3с. - поворот в точку -45°
+// 3. 8.3 - 10.3 ещё на 20°
+// 4. 10.3 - 12с. возврат на 25° в начальную точку.
+
+.animation-lamp {
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-name: lamp;
+    animation-delay: 2s;
+
+    $deg: 15deg;
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    transform: rotate($deg);
+    transform-origin: center center;
+}
+@keyframes lamp {
+    from {
+        $deg: 15deg;
+        -webkit-transform: rotate($deg);
+        -moz-transform: rotate($deg);
+        -ms-transform: rotate($deg);
+        -o-transform: rotate($deg);
+        transform: rotate($deg);
+        transform-origin: center center;
+    }
+    //1.3s
+    11% {
+        $deg: 15deg;
+        -webkit-transform: rotate($deg);
+        -moz-transform: rotate($deg);
+        -ms-transform: rotate($deg);
+        -o-transform: rotate($deg);
+        transform: rotate($deg);
+        transform-origin: center center;
+    }
+    //4.8s
+    40% {
+        $deg: 40deg;
+        -webkit-transform: rotate($deg);
+        -moz-transform: rotate($deg);
+        -ms-transform: rotate($deg);
+        -o-transform: rotate($deg);
+        transform: rotate($deg);
+        transform-origin: center center;
+    }
+    //8.3s
+    69% {
+        $deg: -5deg;
+        -webkit-transform: rotate($deg);
+        -moz-transform: rotate($deg);
+        -ms-transform: rotate($deg);
+        -o-transform: rotate($deg);
+        transform: rotate($deg);
+        transform-origin: center center;
+    }
+    //10.3s
+    86% {
+        $deg: -25deg;
+        -webkit-transform: rotate($deg);
+        -moz-transform: rotate($deg);
+        -ms-transform: rotate($deg);
+        -o-transform: rotate($deg);
+        transform: rotate($deg);
+        transform-origin: center center;
+    }
+    to {
+        $deg: 15deg;
+        -webkit-transform: rotate($deg);
+        -moz-transform: rotate($deg);
+        -ms-transform: rotate($deg);
+        -o-transform: rotate($deg);
+        transform: rotate($deg);
+        transform-origin: center center;
+    }
+}
+
+// Ракета
+
+// Эффект движения - Slow down (медленное затухание, быстрое начало, но не мгновенное)
+
+// 1. 0с-8с движение вверх на 70px
+// 2. 8с-12с обратно
+
+.animation-rocket {
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-name: rocket;
+    animation-delay: 2s;
+}
+@keyframes rocket {
+    from {
+        $x: 0;
+        $y: 0;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+    66% {
+        $x: 0;
+        $y: 70px;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+    to {
+        $x: 0;
+        $y: 0;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+}
+
+// Будильник
+
+// Эффект движения - Natural (плавное ускорение и такое же плавное затухание)
+
+// 1. крутится все 12с.
+// 2. 0-6с размер Scale c 70% до 100%
+// 3. 7-12с размер Scale c 100% до 70%
+
+.animation-clock {
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-name: clock;
+    animation-delay: 2s;
+
+    $scale: 70%;
+    -webkit-transform: scale($scale);
+    -moz-transform: scale($scale);
+    -ms-transform: scale($scale);
+    -o-transform: scale($scale);
+    transform: scale($scale);
+    transform-origin: center center;
+}
+@keyframes clock {
+    from {
+        $deg: 0deg;
+        $scale: 70%;
+        -webkit-transform: rotate($deg) scale($scale);
+        -moz-transform: rotate($deg) scale($scale);
+        -ms-transform: rotate($deg) scale($scale);
+        -o-transform: rotate($deg) scale($scale);
+        transform: rotate($deg) scale($scale);
+        transform-origin: center center;
+    }
+    50% {
+        $deg: -180deg;
+        $scale: 100%;
+        -webkit-transform: rotate($deg) scale($scale);
+        -moz-transform: rotate($deg) scale($scale);
+        -ms-transform: rotate($deg) scale($scale);
+        -o-transform: rotate($deg) scale($scale);
+        transform: rotate($deg) scale($scale);
+        transform-origin: center center;
+    }
+    to {
+        $deg: -360deg;
+        $scale: 70%;
+        -webkit-transform: rotate($deg) scale($scale);
+        -moz-transform: rotate($deg) scale($scale);
+        -ms-transform: rotate($deg) scale($scale);
+        -o-transform: rotate($deg) scale($scale);
+        transform: rotate($deg) scale($scale);
+        transform-origin: center center;
+    }
+}
+
+// Самолёт
+
+// Эффект движения - Natural (плавное ускорение и такое же плавное затухание)
+
+// 1. 0-6с Размер увеличивается с 50% до 100%
+// 2. 0-6с Поворот на 45°
+// 3. 6-12 Всё наоборот
+
+.animation-plane {
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-name: plane;
+    animation-delay: 2s;
+
+    $scale: 50%;
+    -webkit-transform: scale($scale);
+    -moz-transform: scale($scale);
+    -ms-transform: scale($scale);
+    -o-transform: scale($scale);
+    transform: scale($scale);
+    transform-origin: center center;
+}
+@keyframes plane {
+    from {
+        $scale: 50%;
+        $deg: 0deg;
+        -webkit-transform: scale($scale) rotate($deg);
+        -moz-transform: scale($scale) rotate($deg);
+        -ms-transform: scale($scale) rotate($deg);
+        -o-transform: scale($scale) rotate($deg);
+        transform: scale($scale) rotate($deg);
+        transform-origin: center center;
+    }
+    50% {
+        $scale: 100%;
+        $deg: 45deg;
+        -webkit-transform: scale($scale) rotate($deg);
+        -moz-transform: scale($scale) rotate($deg);
+        -ms-transform: scale($scale) rotate($deg);
+        -o-transform: scale($scale) rotate($deg);
+        transform: scale($scale) rotate($deg);
+        transform-origin: center center;
+    }
+    to {
+        $scale: 50%;
+        $deg: 0deg;
+        -webkit-transform: scale($scale) rotate($deg);
+        -moz-transform: scale($scale) rotate($deg);
+        -ms-transform: scale($scale) rotate($deg);
+        -o-transform: scale($scale) rotate($deg);
+        transform: scale($scale) rotate($deg);
+        transform-origin: center center;
+    }
+}
+
+// Тёмная планета
+
+// Эффект движения - Natural (плавное ускорение и такое же плавное затухание)
+
+// 1. 0-6с Поворот на 45° против часовой
+
+// 2. 6-12с. Поворот назад 45°
+
+.animation-planet1 {
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-name: planet1;
+    animation-delay: 2s;
+}
+@keyframes planet1 {
+    from {
+        $deg: 0deg;
+        -webkit-transform: rotate($deg);
+        -moz-transform: rotate($deg);
+        -ms-transform: rotate($deg);
+        -o-transform: rotate($deg);
+        transform: rotate($deg);
+        transform-origin: center center;
+    }
+    50% {
+        $deg: -45deg;
+        -webkit-transform: rotate($deg);
+        -moz-transform: rotate($deg);
+        -ms-transform: rotate($deg);
+        -o-transform: rotate($deg);
+        transform: rotate($deg);
+        transform-origin: center center;
+    }
+    to {
+        $deg: 0deg;
+        -webkit-transform: rotate($deg);
+        -moz-transform: rotate($deg);
+        -ms-transform: rotate($deg);
+        -o-transform: rotate($deg);
+        transform: rotate($deg);
+        transform-origin: center center;
+    }
+}
+
+// Полосатая планета
+
+// Эффект движения - Natural (плавное ускорение и такое же плавное затухание)
+
+// 1. Анимация начинается в 0.8с, длится 6с. Движение на 30px направо
+// 2. 6.8 - 12с наоборот, 30px налево
+
+.animation-planet2 {
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-name: planet2;
+    animation-delay: 2s;
+}
+@keyframes planet2 {
+    from {
+        $x: 0;
+        $y: 0;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+    7% {
+        $x: 0;
+        $y: 0;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+    57% {
+        $x: 30px;
+        $y: 0;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+    to {
+        $x: 0;
+        $y: 0;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+}
+
+// Большая планета
+
+// Эффект движения - Natural (плавное ускорение и такое же плавное затухание)
+
+// 1. Анимация начинается в 0с, длится 6с. Движение на 50px налево + 20px вниз
+// 2. 6с - 12с наоборот, на 50px направо + 20px вверх
+
+.animation-planet3 {
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-name: planet3;
+    animation-delay: 2s;
+}
+@keyframes planet3 {
+    from {
+        $x: 0;
+        $y: 0;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+    50% {
+        $x: -50px;
+        $y: -20px;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+    to {
+        $x: 0;
+        $y: 0;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+}
+
+// Атом
+
+// 1. Эффект движения - Slow down (быстрое начало, медленное затухание)
+// Увеличение 0-6с. увеличение 0%-100%
+
+// 2. Эффект движения - Slow down (быстрое начало, медленное затухание)
+// 0-6с. Поворот на 45°
+
+// 3. Эффект движения - Accelerate (медленное начало, быстрое затухание)
+// 6-12c.  уменьшение 100%-0%
+
+// 4. Эффект движения - Accelerate (медленное начало, быстрое затухание)
+// 6-12с. Поворот назад 45°
+
+.animation-atom {
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-name: atom;
+    animation-delay: 2s;
+
+    $scale: 0;
+    $deg: 0deg;
+    -webkit-transform: scale($scale) rotate($deg);
+    -moz-transform: scale($scale) rotate($deg);
+    -ms-transform: scale($scale) rotate($deg);
+    -o-transform: scale($scale) rotate($deg);
+    transform: scale($scale) rotate($deg);
+    transform-origin: center center;
+}
+@keyframes atom {
+    from {
+        $scale: 0;
+        $deg: 0deg;
+        -webkit-transform: scale($scale) rotate($deg);
+        -moz-transform: scale($scale) rotate($deg);
+        -ms-transform: scale($scale) rotate($deg);
+        -o-transform: scale($scale) rotate($deg);
+        transform: scale($scale) rotate($deg);
+        transform-origin: center center;
+    }
+    50% {
+        $scale: 100%;
+        $deg: 45deg;
+        -webkit-transform: scale($scale) rotate($deg);
+        -moz-transform: scale($scale) rotate($deg);
+        -ms-transform: scale($scale) rotate($deg);
+        -o-transform: scale($scale) rotate($deg);
+        transform: scale($scale) rotate($deg);
+        transform-origin: center center;
+    }
+    to {
+        $scale: 0;
+        $deg: 0deg;
+        -webkit-transform: scale($scale) rotate($deg);
+        -moz-transform: scale($scale) rotate($deg);
+        -ms-transform: scale($scale) rotate($deg);
+        -o-transform: scale($scale) rotate($deg);
+        transform: scale($scale) rotate($deg);
+        transform-origin: center center;
+    }
+}
+
+// Знак деления
+
+// 1. Эффект движения - Slow down (быстрое начало, медленное затухание)
+// 0-3с. Появление (Увеличение на 50%)
+
+// 2. Эффект движения - Accelerate (медленное начало, быстрое затухание)
+// 3-6c.  исчезновение
+
+// 3. Эффект движения - Accelerate (медленное начало, быстрое затухание)
+// 3-6c.  Увеличение на 20%
+
+.animation-divide {
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-name: divide;
+    animation-delay: 2s;
+
+    opacity: 0;
+}
+@keyframes divide {
+    from {
+        opacity: 0;
+        $scale: 100%;
+        -webkit-transform: scale($scale);
+        -moz-transform: scale($scale);
+        -ms-transform: scale($scale);
+        -o-transform: scale($scale);
+        transform: scale($scale);
+        transform-origin: center center;
+    }
+    25% {
+        opacity: 100%;
+        $scale: 150%;
+        -webkit-transform: scale($scale);
+        -moz-transform: scale($scale);
+        -ms-transform: scale($scale);
+        -o-transform: scale($scale);
+        transform: scale($scale);
+        transform-origin: center center;
+    }
+    50% {
+        opacity: 0;
+        $scale: 170%;
+        -webkit-transform: scale($scale);
+        -moz-transform: scale($scale);
+        -ms-transform: scale($scale);
+        -o-transform: scale($scale);
+        transform: scale($scale);
+        transform-origin: center center;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+// Крестик
+
+// 1. Эффект движения - Slow down (быстрое начало, медленное затухание)
+// 6-9с. Появление с увеличением. Увеличение на 50%
+
+// 2. Эффект движения - Accelerate (медленное начало, быстрое затухание)
+// 9-11.4c.  исчезновение
+
+// 3. Эффект движения - Accelerate (медленное начало, быстрое затухание)
+// 9-11.4c.  Увеличение на 20%
+
+.animation-plus {
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-name: plus;
+    animation-delay: 2s;
+
+    opacity: 0;
+}
+@keyframes plus {
+    from {
+        opacity: 0;
+        $scale: 100%;
+        -webkit-transform: scale($scale);
+        -moz-transform: scale($scale);
+        -ms-transform: scale($scale);
+        -o-transform: scale($scale);
+        transform: scale($scale);
+        transform-origin: center center;
+    }
+    50% {
+        opacity: 0;
+        $scale: 100%;
+        -webkit-transform: scale($scale);
+        -moz-transform: scale($scale);
+        -ms-transform: scale($scale);
+        -o-transform: scale($scale);
+        transform: scale($scale);
+        transform-origin: center center;
+    }
+    75% {
+        opacity: 1;
+        $scale: 150%;
+        -webkit-transform: scale($scale);
+        -moz-transform: scale($scale);
+        -ms-transform: scale($scale);
+        -o-transform: scale($scale);
+        transform: scale($scale);
+        transform-origin: center center;
+    }
+    95% {
+        opacity: 0;
+        $scale: 170%;
+        -webkit-transform: scale($scale);
+        -moz-transform: scale($scale);
+        -ms-transform: scale($scale);
+        -o-transform: scale($scale);
+        transform: scale($scale);
+        transform-origin: center center;
+    }
+    to {
+        opacity: 0;
+        $scale: 170%;
+        -webkit-transform: scale($scale);
+        -moz-transform: scale($scale);
+        -ms-transform: scale($scale);
+        -o-transform: scale($scale);
+        transform: scale($scale);
+        transform-origin: center center;
+    }
+}
+
+// Воздушный шар
+
+// Эффект движения - Natural (плавное ускорение и такое же плавное затухание)
+
+// 1. 0с-6с движение вниз на 34px
+// 2. 6с-12с обратно
+
+.animation-balloon {
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-name: balloon;
+    animation-delay: 2s;
+}
+@keyframes balloon {
+    from {
+        $x: 0;
+        $y: 0;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+    50% {
+        $x: 0;
+        $y: -34px;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+    to {
+        $x: 0;
+        $y: 0;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+}
+
+// Палитра
+
+// Эффект движения - Natural (плавное ускорение и такое же плавное затухание)
+
+// 1. 3-10с вращение на 360° по часовой
+
+.animation-palette {
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-name: palette;
+    animation-delay: 2s;
+}
+@keyframes palette {
+    from {
+        $deg: 0deg;
+        -webkit-transform: rotate($deg);
+        -moz-transform: rotate($deg);
+        -ms-transform: rotate($deg);
+        -o-transform: rotate($deg);
+        transform: rotate($deg);
+        transform-origin: center center;
+    }
+    25% {
+        $deg: 0deg;
+        -webkit-transform: rotate($deg);
+        -moz-transform: rotate($deg);
+        -ms-transform: rotate($deg);
+        -o-transform: rotate($deg);
+        transform: rotate($deg);
+        transform-origin: center center;
+    }
+    86% {
+        $deg: 360deg;
+        -webkit-transform: rotate($deg);
+        -moz-transform: rotate($deg);
+        -ms-transform: rotate($deg);
+        -o-transform: rotate($deg);
+        transform: rotate($deg);
+        transform-origin: center center;
+    }
+    to {
+        $deg: 360deg;
+        -webkit-transform: rotate($deg);
+        -moz-transform: rotate($deg);
+        -ms-transform: rotate($deg);
+        -o-transform: rotate($deg);
+        transform: rotate($deg);
+        transform-origin: center center;
+    }
+}
