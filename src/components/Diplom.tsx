@@ -1,5 +1,3 @@
-import UnderlinedText from "./UnderlinedText";
-
 function Diplom() {
     return (
         <div className="diplom">
@@ -7,7 +5,8 @@ function Diplom() {
                 <div className="block-text">
                     <div className="block-title">
                         <h2>
-                            Выдаём <UnderlinedText>дипломы</UnderlinedText>{" "}
+                            Выдаём{" "}
+                            <span className="text-underlined">дипломы</span>{" "}
                             участникам
                         </h2>
                     </div>

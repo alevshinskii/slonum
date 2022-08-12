@@ -1,6 +1,7 @@
 import About from "./components/About";
 import Diplom from "./components/Diplom";
 import FAQ from "./components/FAQ";
+import Footer from "./components/Footer";
 import Goals from "./components/Goals";
 import Header from "./components/Header";
 import Plan from "./components/Plan";
@@ -18,6 +19,7 @@ function App() {
             <Registration />
             <FAQ />
             <Subscribe />
+            <Footer />
         </div>
     );
 }

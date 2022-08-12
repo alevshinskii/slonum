@@ -1,12 +1,12 @@
 import Card from "./Card";
-import UnderlinedText from "./UnderlinedText";
 
 function Goals() {
     return (
         <div className="goals">
             <div className="block-title">
                 <h2>
-                    Для чего <UnderlinedText>нужно</UnderlinedText> участвовать
+                    Для чего <span className="text-underlined">нужно</span>{" "}
+                    участвовать
                 </h2>
             </div>
             <div className="goals-content container">
