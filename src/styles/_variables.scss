@@ -1,12 +1,17 @@
 $bg-color: white;
 
 $shadow-opacity: 30%;
-$dark-opacity: 70%;
+$dark-opacity: 80%;
+$extra-dark-opacity: 50%;
+$light-opacity: 80%;
 $underline-opacity: 70%;
 
 $main-color: #14a76c;
 $main-color-shadow: mix($main-color, $bg-color, $shadow-opacity);
 $main-color-dark: mix($main-color, black, $dark-opacity);
+$main-color-extra-dark: mix($main-color, black, $extra-dark-opacity);
+
+$main-color-light: mix($main-color, white, $light-opacity);
 
 $main-accent-color: #ff652f;
 $main-accent-shadow: mix($main-accent-color, $bg-color, $shadow-opacity);

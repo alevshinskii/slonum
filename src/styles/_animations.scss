@@ -201,6 +201,7 @@
     animation-iteration-count: infinite;
     animation-name: rocket;
     animation-delay: 2s;
+    animation-timing-function: ease-out;
 }
 @keyframes rocket {
     from {
@@ -512,6 +513,7 @@
 }
 @keyframes atom {
     from {
+        animation-timing-function: ease-in;
         $scale: 0;
         $deg: 0deg;
         -webkit-transform: scale($scale) rotate($deg);
@@ -522,6 +524,7 @@
         transform-origin: center center;
     }
     50% {
+        animation-timing-function: ease-out;
         $scale: 100%;
         $deg: 45deg;
         -webkit-transform: scale($scale) rotate($deg);
@@ -564,6 +567,7 @@
 }
 @keyframes divide {
     from {
+        animation-timing-function: ease-out;
         opacity: 0;
         $scale: 100%;
         -webkit-transform: scale($scale);
@@ -574,6 +578,7 @@
         transform-origin: center center;
     }
     25% {
+        animation-timing-function: ease-in;
         opacity: 100%;
         $scale: 150%;
         -webkit-transform: scale($scale);
@@ -584,6 +589,7 @@
         transform-origin: center center;
     }
     50% {
+        animation-timing-function: ease-in;
         opacity: 0;
         $scale: 170%;
         -webkit-transform: scale($scale);
@@ -619,6 +625,7 @@
 }
 @keyframes plus {
     from {
+        animation-timing-function: ease-out;
         opacity: 0;
         $scale: 100%;
         -webkit-transform: scale($scale);
@@ -629,6 +636,7 @@
         transform-origin: center center;
     }
     50% {
+        animation-timing-function: ease-in;
         opacity: 0;
         $scale: 100%;
         -webkit-transform: scale($scale);
@@ -639,6 +647,7 @@
         transform-origin: center center;
     }
     75% {
+        animation-timing-function: ease-in;
         opacity: 1;
         $scale: 150%;
         -webkit-transform: scale($scale);
@@ -649,6 +658,7 @@
         transform-origin: center center;
     }
     95% {
+        animation-timing-function: ease-in;
         opacity: 0;
         $scale: 170%;
         -webkit-transform: scale($scale);
@@ -762,4 +772,167 @@
         transform: rotate($deg);
         transform-origin: center center;
     }
+}
+
+// Длительность всей анимации 4,5с
+// Появляется сразу - ещё до космоса
+// Зациклена без конца
+
+// В этом случае - лучше руководствоваться видео
+
+// Эффект движения - Bouncy (упругий, выходит за рамки указанных градусов в пиковых точках)
+
+// 1. в точке кисть поовёрнута на 24°
+// 2. в точке кисть повёрнута на 66°
+// 3. в точке кисть повёрнута на 72°
+
+@keyframes pen {
+    from {
+        $deg: 0deg;
+        $x: 0;
+        $y: 0;
+        -webkit-transform: rotate($deg) translate($x, $y);
+        -moz-transform: rotate($deg) translate($x, $y);
+        -ms-transform: rotate($deg) translate($x, $y);
+        -o-transform: rotate($deg) translate($x, $y);
+        transform: rotate($deg) translate($x, $y);
+        transform-origin: center center;
+    }
+    8% {
+        $deg: 8deg;
+        $x: 5px;
+        $y: 0;
+        -webkit-transform: rotate($deg) translate($x, $y);
+        -moz-transform: rotate($deg) translate($x, $y);
+        -ms-transform: rotate($deg) translate($x, $y);
+        -o-transform: rotate($deg) translate($x, $y);
+        transform: rotate($deg) translate($x, $y);
+        transform-origin: center center;
+    }
+    16% {
+        $deg: 16deg;
+        $x: -5px;
+        $y: 0;
+        -webkit-transform: rotate($deg) translate($x, $y);
+        -moz-transform: rotate($deg) translate($x, $y);
+        -ms-transform: rotate($deg) translate($x, $y);
+        -o-transform: rotate($deg) translate($x, $y);
+        transform: rotate($deg) translate($x, $y);
+        transform-origin: center center;
+    }
+    25% {
+        $deg: 24deg;
+        $x: 5px;
+        $y: 0;
+        -webkit-transform: rotate($deg) translate($x, $y);
+        -moz-transform: rotate($deg) translate($x, $y);
+        -ms-transform: rotate($deg) translate($x, $y);
+        -o-transform: rotate($deg) translate($x, $y);
+        transform: rotate($deg) translate($x, $y);
+        transform-origin: center center;
+    }
+    33% {
+        $deg: 38deg;
+        $x: -5px;
+        $y: 0;
+        -webkit-transform: rotate($deg) translate($x, $y);
+        -moz-transform: rotate($deg) translate($x, $y);
+        -ms-transform: rotate($deg) translate($x, $y);
+        -o-transform: rotate($deg) translate($x, $y);
+        transform: rotate($deg) translate($x, $y);
+        transform-origin: center center;
+    }
+    41% {
+        $deg: 52deg;
+        $x: 5px;
+        $y: 0;
+        -webkit-transform: rotate($deg) translate($x, $y);
+        -moz-transform: rotate($deg) translate($x, $y);
+        -ms-transform: rotate($deg) translate($x, $y);
+        -o-transform: rotate($deg) translate($x, $y);
+        transform: rotate($deg) translate($x, $y);
+        transform-origin: center center;
+    }
+    50% {
+        $deg: 66deg;
+        $x: -5px;
+        $y: 0;
+        -webkit-transform: rotate($deg) translate($x, $y);
+        -moz-transform: rotate($deg) translate($x, $y);
+        -ms-transform: rotate($deg) translate($x, $y);
+        -o-transform: rotate($deg) translate($x, $y);
+        transform: rotate($deg) translate($x, $y);
+        transform-origin: center center;
+    }
+    58% {
+        $deg: 68deg;
+        $x: 5px;
+        $y: 0;
+        -webkit-transform: rotate($deg) translate($x, $y);
+        -moz-transform: rotate($deg) translate($x, $y);
+        -ms-transform: rotate($deg) translate($x, $y);
+        -o-transform: rotate($deg) translate($x, $y);
+        transform: rotate($deg) translate($x, $y);
+        transform-origin: center center;
+    }
+    66% {
+        $deg: 70deg;
+        $x: -5px;
+        $y: -5px;
+        -webkit-transform: rotate($deg) translate($x, $y);
+        -moz-transform: rotate($deg) translate($x, $y);
+        -ms-transform: rotate($deg) translate($x, $y);
+        -o-transform: rotate($deg) translate($x, $y);
+        transform: rotate($deg) translate($x, $y);
+        transform-origin: center center;
+    }
+    75% {
+        $deg: 72deg;
+        $x: 5px;
+        $y: 5px;
+        -webkit-transform: rotate($deg) translate($x, $y);
+        -moz-transform: rotate($deg) translate($x, $y);
+        -ms-transform: rotate($deg) translate($x, $y);
+        -o-transform: rotate($deg) translate($x, $y);
+        transform: rotate($deg) translate($x, $y);
+        transform-origin: center center;
+    }
+    83% {
+        $deg: 48deg;
+        $x: -5px;
+        $y: 5px;
+        -webkit-transform: rotate($deg) translate($x, $y);
+        -moz-transform: rotate($deg) translate($x, $y);
+        -ms-transform: rotate($deg) translate($x, $y);
+        -o-transform: rotate($deg) translate($x, $y);
+        transform: rotate($deg) translate($x, $y);
+        transform-origin: center center;
+    }
+    91% {
+        $deg: 24deg;
+        $x: 5px;
+        $y: -5px;
+        -webkit-transform: rotate($deg) translate($x, $y);
+        -moz-transform: rotate($deg) translate($x, $y);
+        -ms-transform: rotate($deg) translate($x, $y);
+        -o-transform: rotate($deg) translate($x, $y);
+        transform: rotate($deg) translate($x, $y);
+        transform-origin: center center;
+    }
+    to {
+        $deg: 0deg;
+        $x: 0;
+        $y: 0;
+        -webkit-transform: rotate($deg) translate($x, $y);
+        -moz-transform: rotate($deg) translate($x, $y);
+        -ms-transform: rotate($deg) translate($x, $y);
+        -o-transform: rotate($deg) translate($x, $y);
+        transform: rotate($deg) translate($x, $y);
+        transform-origin: center center;
+    }
+}
+
+.animation-pen {
+    animation: pen 4.5s infinite;
+    animation-timing-function: linear;
 }

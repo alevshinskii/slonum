@@ -13,9 +13,9 @@ h2 {
 }
 
 .container {
-    margin-left: 15%;
-    margin-right: 15%;
-    width: 70%;
+    margin-left: 14%;
+    margin-right: 14%;
+    width: 72%;
     padding-bottom: 200px;
 }
 
@@ -53,11 +53,23 @@ h2 {
 .fill-main-accent-color {
     fill: $main-accent-color;
 }
+.fill-main-accent-color-light {
+    fill: $main-accent-light;
+}
 .fill-main-color {
     fill: $main-color;
 }
+.fill-main-color-light {
+    fill: $main-color-light;
+}
+.fill-main-color-shadow {
+    fill: $main-color-shadow;
+}
 .fill-main-color-dark {
     fill: $main-color-dark;
+}
+.fill-main-color-extra-dark {
+    fill: $main-color-extra-dark;
 }
 .fill-main-accent-underline {
     fill: $main-accent-light;
