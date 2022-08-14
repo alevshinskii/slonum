@@ -1,44 +1,58 @@
-.plan{
+.plan {
     background-image: url(../img/sky-bg.png);
     height: 907px;
     background-position-x: center;
+    position: relative;
+    overflow: hidden;
 
+    .plane {
+        position: absolute;
+        left: -9%;
+        top: 7%;
+        width: 130%;
+        height: 100%;
+        z-index: 1;
 
-    .block-title{
+        > img {
+            width: 100px;
+
+            height: auto;
+        }
+    }
+    .block-title {
         padding-bottom: 80px;
     }
 
-
-    .plan-content{
-        font:$point-font;
-        color:$additional-font-color;
+    .plan-content {
+        font: $point-font;
+        color: $additional-font-color;
 
         position: relative;
 
-        &>img{
+        & > img {
             width: 100%;
             height: auto;
         }
 
-        .plan-chapter{
+        .plan-chapter {
             display: flex;
             position: absolute;
-            .round-btn{
+            .round-btn {
                 margin-right: 40px;
             }
         }
 
-        .chapter-1{
-            top:-40px;
-            left:-40px;
+        .chapter-1 {
+            top: -40px;
+            left: -40px;
         }
-        .chapter-2{
-            top:40%;
-            left:34%;
+        .chapter-2 {
+            top: 40%;
+            left: 34%;
         }
-        .chapter-3{
-            top:83%;
-            left:67%;
+        .chapter-3 {
+            top: 83%;
+            left: 67%;
         }
     }
 }

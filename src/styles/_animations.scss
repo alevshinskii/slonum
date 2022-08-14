@@ -936,3 +936,165 @@
     animation: pen 4.5s infinite;
     animation-timing-function: linear;
 }
+
+// Полёт самолётика
+
+.animation-plan-plane {
+    animation-play-state: paused;
+    offset-path: path(
+        "M0.5 1C488.5 44.5 530.5 47 1032.5 344C1486.5 594.5 1808 582 2173 249"
+    );
+
+    animation: plan-plane 4s ease-in-out;
+}
+@keyframes plan-plane {
+    0% {
+        $deg: 0deg;
+        offset-distance: 0%;
+    }
+    100% {
+        $deg: 0deg;
+        offset-distance: 100%;
+    }
+}
+
+.animation-plan-text1 {
+    animation: plan-text1 4s ease-in-out;
+}
+
+@keyframes plan-text1 {
+    0% {
+        opacity: 0;
+        $x: 100px;
+        $y: 0;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+    25% {
+        opacity: 0;
+        $x: 100px;
+        $y: 0;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+    50% {
+        opacity: 1;
+        $x: 0;
+        $y: 0;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+    100% {
+        opacity: 1;
+        $x: 0;
+        $y: 0;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+}
+
+.animation-plan-text2 {
+    animation: plan-text2 4s ease-in-out;
+}
+
+@keyframes plan-text2 {
+    0% {
+        opacity: 0;
+        $x: 100px;
+        $y: 0;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+    35% {
+        opacity: 0;
+        $x: 100px;
+        $y: 0;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+    55% {
+        opacity: 1;
+        $x: 0;
+        $y: 0;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+    100% {
+        opacity: 1;
+        $x: 0;
+        $y: 0;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+}
+
+.animation-plan-text3 {
+    animation: plan-text3 4s ease-in-out;
+}
+
+@keyframes plan-text3 {
+    0% {
+        opacity: 0;
+        $x: 100px;
+        $y: 0;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+    45% {
+        opacity: 0;
+        $x: 100px;
+        $y: 0;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+    65% {
+        opacity: 1;
+        $x: 0;
+        $y: 0;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+    100% {
+        opacity: 1;
+        $x: 0;
+        $y: 0;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+}
