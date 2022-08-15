@@ -1098,3 +1098,120 @@
         transform: translate($x, $y);
     }
 }
+
+//  Полёт самолётика в форме
+
+// - Пошаговая анимация
+
+//     2 шага:
+
+//     1. вылет с небольшим замедлением из-за пределов 0.8с до этой точки
+
+//     2. удар с небольшим возвратом и изменение позиций других
+
+.animation-reg-single-plane {
+    animation: reg-single 2s reverse ease-in-out;
+    offset-path: path("M1 45C305.5 90 543.5 -359.5 578.5 -471.5");
+}
+@keyframes reg-single {
+    0% {
+        $x: 0;
+        $y: 0;
+        $deg: 20deg;
+        -webkit-transform: translate($x, $y) rotate($deg);
+        -moz-transform: translate($x, $y) rotate($deg);
+        -ms-transform: translate($x, $y) rotate($deg);
+        -o-transform: translate($x, $y) rotate($deg);
+        transform: translate($x, $y) rotate($deg);
+        offset-distance: 0%;
+    }
+    12% {
+        $x: -20px;
+        $y: -7px;
+        $deg: 20deg;
+        -webkit-transform: translate($x, $y) rotate($deg);
+        -moz-transform: translate($x, $y) rotate($deg);
+        -ms-transform: translate($x, $y) rotate($deg);
+        -o-transform: translate($x, $y) rotate($deg);
+        transform: translate($x, $y) rotate($deg);
+    }
+    100% {
+        $x: -20px;
+        $y: -7px;
+        $deg: 20deg;
+        -webkit-transform: translate($x, $y) rotate($deg);
+        -moz-transform: translate($x, $y) rotate($deg);
+        -ms-transform: translate($x, $y) rotate($deg);
+        -o-transform: translate($x, $y) rotate($deg);
+        transform: translate($x, $y) rotate($deg);
+        offset-distance: 100%;
+    }
+}
+
+.animation-reg-plane-1 {
+    animation: reg-plane-1 2s reverse ease-in;
+}
+@keyframes reg-plane-1 {
+    0% {
+        $x: 0;
+        $y: 0;
+        $deg: -10deg;
+        -webkit-transform: translate($x, $y) rotate($deg);
+        -moz-transform: translate($x, $y) rotate($deg);
+        -ms-transform: translate($x, $y) rotate($deg);
+        -o-transform: translate($x, $y) rotate($deg);
+        transform: translate($x, $y) rotate($deg);
+    }
+    16% {
+        $x: 50px;
+        $y: -10px;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+    100% {
+        $x: 50px;
+        $y: -10px;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+}
+
+.animation-reg-plane-2 {
+    animation: reg-plane-2 2s reverse ease-in;
+}
+@keyframes reg-plane-2 {
+    0% {
+        $x: 0;
+        $y: 0;
+        $deg: 10deg;
+        -webkit-transform: translate($x, $y) rotate($deg);
+        -moz-transform: translate($x, $y) rotate($deg);
+        -ms-transform: translate($x, $y) rotate($deg);
+        -o-transform: translate($x, $y) rotate($deg);
+        transform: translate($x, $y) rotate($deg);
+    }
+    16% {
+        $x: 40px;
+        $y: 10px;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+    100% {
+        $x: 40px;
+        $y: 10px;
+        -webkit-transform: translate($x, $y);
+        -moz-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+        -o-transform: translate($x, $y);
+        transform: translate($x, $y);
+    }
+}

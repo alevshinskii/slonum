@@ -3,11 +3,28 @@ import SubmitButton from "./SubmitButton";
 import SubmitButtonType from "./SubmitButtonType";
 import TextInput from "./TextInput";
 import PriceFormImg from "./PriceFormImg";
+import { useRef } from "react";
+import useIntersection from "./useIntersection";
 
 function Registration() {
     const priceFormImg = require("../img/price-form.svg").default;
     const okImg = require("../img/socials-ok.svg").default;
     const vkImg = require("../img/socials-vk.svg").default;
+
+    const plane1 = require("../img/registration-plane1.svg").default;
+    const plane2 = require("../img/registration-plane2.svg").default;
+    const singlePlane = require("../img/registration-plane.svg").default;
+
+    const planeref = useRef(null);
+    const inViewport = useIntersection(planeref, "100px"); // Trigger as soon as the element becomes visible
+    const singlePlaneElement = document.getElementById("reg-plane");
+    const plane1Element = document.getElementById("reg-plane1");
+    const plane2Element = document.getElementById("reg-plane2");
+    if (inViewport) {
+        singlePlaneElement?.classList.add("animation-reg-single-plane");
+        plane1Element?.classList.add("animation-reg-plane-1");
+        plane2Element?.classList.add("animation-reg-plane-2");
+    }
 
     return (
         <div className="registration">
@@ -57,6 +74,15 @@ function Registration() {
                     </div>
                 </div>
                 <form className="registration-form">
+                    <div className="plane-1" ref={planeref} id="reg-plane1">
+                        <img src={plane1} alt="" />
+                    </div>
+                    <div className="plane-2" id="reg-plane2">
+                        <img src={plane2} alt="" />
+                    </div>
+                    <div className="single-plane" id="reg-plane">
+                        <img src={singlePlane} alt="" />
+                    </div>
                     <h2>Зарегистрируйтесь, чтобы участвовать</h2>
                     <TextInput placeholder="ФИО ребёнка"></TextInput>
                     <TextInput placeholder="Дата рождения"></TextInput>

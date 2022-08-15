@@ -33,7 +33,7 @@ function Plan() {
                 <div className="plan-content">
                     <img src={require("../img/plan-line.svg").default} alt="" />
 
-                    <div className="plan-chapter chapter-1">
+                    <div className="plan-chapter chapter-1" ref={planeref}>
                         <RoundBtn diameter={"80px"}>1</RoundBtn>
                         <div id="plan-text1">
                             Зарегистрируйтесь
@@ -46,7 +46,7 @@ function Plan() {
                     </div>
                     <div className="plan-chapter chapter-2">
                         <RoundBtn diameter={"80px"}>2</RoundBtn>
-                        <div id="plan-text2" ref={planeref}>
+                        <div id="plan-text2">
                             Выполните все
                             <br />
                             условия конкурса
