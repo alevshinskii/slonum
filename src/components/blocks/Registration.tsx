@@ -1,19 +1,18 @@
-import CheckBox from "./CheckBox";
-import SubmitButton from "./SubmitButton";
-import SubmitButtonType from "./SubmitButtonType";
-import TextInput from "./TextInput";
-import PriceFormImg from "./PriceFormImg";
+import CheckBox from "../ui/CheckBox";
+import SubmitButton from "../ui/SubmitButton";
+import SubmitButtonType from "../ui/SubmitButtonType";
+import TextInput from "../ui/TextInput";
+import PriceFormImg from "../ui/PriceFormImg";
 import { useRef } from "react";
-import useIntersection from "./useIntersection";
+import useIntersection from "../../scripts/useIntersection";
 
 function Registration() {
-    const priceFormImg = require("../img/price-form.svg").default;
-    const okImg = require("../img/socials-ok.svg").default;
-    const vkImg = require("../img/socials-vk.svg").default;
+    const okImg = require("../../img/socials-ok.svg").default;
+    const vkImg = require("../../img/socials-vk.svg").default;
 
-    const plane1 = require("../img/registration-plane1.svg").default;
-    const plane2 = require("../img/registration-plane2.svg").default;
-    const singlePlane = require("../img/registration-plane.svg").default;
+    const plane1 = require("../../img/registration-plane1.svg").default;
+    const plane2 = require("../../img/registration-plane2.svg").default;
+    const singlePlane = require("../../img/registration-plane.svg").default;
 
     const planeref = useRef(null);
     const inViewport = useIntersection(planeref, "100px"); // Trigger as soon as the element becomes visible

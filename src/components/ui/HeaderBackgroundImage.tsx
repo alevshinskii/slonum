@@ -789,20 +789,20 @@ function HeaderBackgroundImage() {
         </div>
     );
 
-    const rocket = require("../img/rocket.svg").default;
-    const balloon = require("../img/balloon.svg").default;
-    const palette = require("../img/palette.svg").default;
-    const plus = require("../img/plus.svg").default;
-    const divide = require("../img/divide.svg").default;
-    const atom = require("../img/atom.svg").default;
-    const planet1 = require("../img/planet1.svg").default;
-    const planet2 = require("../img/planet2.svg").default;
-    const planet3 = require("../img/planet3.svg").default;
-    const lamp = require("../img/lamp.svg").default;
-    const clock = require("../img/clock.svg").default;
-    const elephant = require("../img/elephant.svg").default;
-    const plane = require("../img/plane.svg").default;
-    const pen = require("../img/pen.svg").default;
+    const rocket = require("../../img/rocket.svg").default;
+    const balloon = require("../../img/balloon.svg").default;
+    const palette = require("../../img/palette.svg").default;
+    const plus = require("../../img/plus.svg").default;
+    const divide = require("../../img/divide.svg").default;
+    const atom = require("../../img/atom.svg").default;
+    const planet1 = require("../../img/planet1.svg").default;
+    const planet2 = require("../../img/planet2.svg").default;
+    const planet3 = require("../../img/planet3.svg").default;
+    const lamp = require("../../img/lamp.svg").default;
+    const clock = require("../../img/clock.svg").default;
+    const elephant = require("../../img/elephant.svg").default;
+    const plane = require("../../img/plane.svg").default;
+    const pen = require("../../img/pen.svg").default;
 
     return (
         <div className="girl-and-space-img ">

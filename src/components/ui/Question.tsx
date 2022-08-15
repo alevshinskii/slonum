@@ -5,7 +5,7 @@ interface QuestionProps {
 }
 
 function Question({ children }: QuestionProps) {
-    const plusImg = require("../img/cross.svg").default;
+    const plusImg = require("../../img/cross.svg").default;
     return (
         <div className="question">
             <h5>{children}</h5>

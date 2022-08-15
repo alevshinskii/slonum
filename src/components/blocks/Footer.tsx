@@ -1,11 +1,11 @@
-import RoundBtn from "./RoundBtn";
+import RoundBtn from "../ui/RoundBtn";
 
 function Footer() {
-    const vk = require("../img/footer-vk.svg").default;
-    const tg = require("../img/footer-tg.svg").default;
-    const ya = require("../img/footer-ya.svg").default;
+    const vk = require("../../img/footer-vk.svg").default;
+    const tg = require("../../img/footer-tg.svg").default;
+    const ya = require("../../img/footer-ya.svg").default;
 
-    const arrow = require("../img/arrow.svg").default;
+    const arrow = require("../../img/arrow.svg").default;
 
     return (
         <div className="footer">

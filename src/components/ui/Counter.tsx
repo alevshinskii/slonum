@@ -2,7 +2,7 @@ import { useState } from "react";
 import CounterInput from "./CounterInput";
 
 function Counter() {
-    const dotsSvg = require("../img/dots.svg").default;
+    const dotsSvg = require("../../img/dots.svg").default;
 
     const [hours] = useState("01");
     const [minutes] = useState("09");

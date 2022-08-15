@@ -1,9 +1,9 @@
 import { useRef } from "react";
-import RoundBtn from "./RoundBtn";
-import useIntersection from "./useIntersection";
+import RoundBtn from "../ui/RoundBtn";
+import useIntersection from "../../scripts/useIntersection";
 
 function Plan() {
-    const plane = require("../img/single-plane.svg").default;
+    const plane = require("../../img/single-plane.svg").default;
 
     const planeref = useRef(null);
     const inViewport = useIntersection(planeref, "0px"); // Trigger as soon as the element becomes visible
@@ -31,7 +31,10 @@ function Plan() {
                     </h2>
                 </div>
                 <div className="plan-content">
-                    <img src={require("../img/plan-line.svg").default} alt="" />
+                    <img
+                        src={require("../../img/plan-line.svg").default}
+                        alt=""
+                    />
 
                     <div className="plan-chapter chapter-1" ref={planeref}>
                         <RoundBtn diameter={"80px"}>1</RoundBtn>

@@ -1,10 +1,10 @@
-import CheckBox from "./CheckBox";
-import SubmitButton from "./SubmitButton";
-import SubmitButtonType from "./SubmitButtonType";
-import TextInput from "./TextInput";
+import CheckBox from "../ui/CheckBox";
+import SubmitButton from "../ui/SubmitButton";
+import SubmitButtonType from "../ui/SubmitButtonType";
+import TextInput from "../ui/TextInput";
 
 function Subscribe() {
-    const background = require("../img/subscribe-bg.png");
+    const background = require("../../img/subscribe-bg.png");
     return (
         <div className="subscribe">
             <div className="container">

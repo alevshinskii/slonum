@@ -1,4 +1,4 @@
-import Card from "./Card";
+import Card from "../ui/Card";
 
 function Goals() {
     return (
@@ -12,7 +12,10 @@ function Goals() {
             <div className="goals-content container">
                 <Card>
                     <div>
-                        <img src={require("../img/star.svg").default} alt="" />
+                        <img
+                            src={require("../../img/star.svg").default}
+                            alt=""
+                        />
                         <div>
                             Шанс занять 1 место — в вашем городе и по всей
                             России
@@ -21,7 +24,10 @@ function Goals() {
                 </Card>
                 <Card>
                     <div>
-                        <img src={require("../img/winne.svg").default} alt="" />
+                        <img
+                            src={require("../../img/winne.svg").default}
+                            alt=""
+                        />
                         <div>
                             Развитие самостоятельности + свободное время для
                             родителей ;)
@@ -31,7 +37,7 @@ function Goals() {
                 <Card>
                     <div>
                         <img
-                            src={require("../img/certification.svg").default}
+                            src={require("../../img/certification.svg").default}
                             alt=""
                         />
                         <div>
@@ -42,7 +48,10 @@ function Goals() {
                 </Card>
                 <Card>
                     <div>
-                        <img src={require("../img/gift.svg").default} alt="" />
+                        <img
+                            src={require("../../img/gift.svg").default}
+                            alt=""
+                        />
                         <div>
                             Призы и скидки для подписчиков и авторизованных
                             пользователей
@@ -51,7 +60,10 @@ function Goals() {
                 </Card>
                 <Card>
                     <div>
-                        <img src={require("../img/email.svg").default} alt="" />
+                        <img
+                            src={require("../../img/email.svg").default}
+                            alt=""
+                        />
                         <div>
                             Бесплатный диплом на email — через 1 день после
                             конкурса
@@ -60,7 +72,7 @@ function Goals() {
                 </Card>
                 <Card>
                     <div>
-                        <img src={require("../img/vk.svg").default} alt="" />
+                        <img src={require("../../img/vk.svg").default} alt="" />
                         <div>
                             Публикация работ победителей во ВКонтакте.{" "}
                             <a

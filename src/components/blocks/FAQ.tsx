@@ -1,4 +1,4 @@
-import Question from "./Question";
+import Question from "../ui/Question";
 
 function FAQ() {
     return (

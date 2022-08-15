@@ -1,9 +1,9 @@
-import Logo from "./Logo";
-import LogInButton from "./LogInButton";
-import HeaderBackgroundImage from "./HeaderBackgroundImage";
-import SubmitButton from "./SubmitButton";
-import Counter from "./Counter";
-import SubmitButtonType from "./SubmitButtonType";
+import Logo from "../ui/Logo";
+import LogInButton from "../ui/LogInButton";
+import HeaderBackgroundImage from "../ui/HeaderBackgroundImage";
+import SubmitButton from "../ui/SubmitButton";
+import Counter from "../ui/Counter";
+import SubmitButtonType from "../ui/SubmitButtonType";
 
 function Header() {
     return (

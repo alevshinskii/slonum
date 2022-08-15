@@ -27,7 +27,7 @@ function Diplom() {
                     </div>
                 </div>
                 <div className="block-img">
-                    <img src={require("../img/diplom.png")} alt="" />
+                    <img src={require("../../img/diplom.png")} alt="" />
                 </div>
             </div>
         </div>

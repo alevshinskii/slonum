@@ -1,12 +1,11 @@
-.goals{
-    background-image: url(../img/waves-bg.svg);
+.goals {
+    background-image: url(../../img/waves-bg.svg);
     height: 602px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 
-    .goals-content{
+    .goals-content {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
